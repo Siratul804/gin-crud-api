@@ -33,4 +33,4 @@ Containerized Go + Gin CRUD API for managing books.
 
 ## License
 
-MIT © Your Name
+MIT © Siratul Islam
