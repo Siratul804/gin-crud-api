@@ -2,23 +2,51 @@
 
 Containerized Go + Gin CRUD API for managing books.
 
-## Quickstart
+## Quick Run 
 
-1. **Build** the Docker image (replace URL if needed):
+1. **Install Golang**
+   ```
+   https://go.dev/doc/install
+   ```
+2. **Install Gin**
+   ```
+   https://go.dev/doc/install
+   ```
+3. **Run Commad**
+   ```
+   go run main.go
+   ```
+## Docker Test
+
+1. **Run a docker container**:
+
+
+```
+  docker run -it -p 8080:8080 --name my-ubuntu-vps-go -v /app/go-project ubuntu:latest /bin/bash
+```
+
+
+2. **Install Required Packages**:
 
    ```bash
-   docker build \
-     --build-arg REPO_URL=https://github.com/Siratul804/gin-crud-api \
-     -t gin-crud-api:latest .
+   apt update
+   apt install -y golang
+   go get github.com/gin-gonic/gin
+   apt install -y nano
    ```
-
-2. **Run** the container:
-
+3. **Project Setup**:
    ```bash
-   docker run -d --name gin-api -p 8080:8080 gin-crud-api:latest
+   touch main.go
+   go mod init go-project
+   nano main.go // past the code of main.go
+   cat main.go // check the code has been saved or not
+
+   go run main.go
+   
    ```
 
-3. **Test** endpoints:
+## Test Endpoint
+
    - List books: `GET http://localhost:8080/books`
    - Create book: `POST http://localhost:8080/books`
      ```json
