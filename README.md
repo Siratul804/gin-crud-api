@@ -8,7 +8,7 @@ Containerized Go + Gin CRUD API for managing books.
 
    ```bash
    docker build \
-     --build-arg REPO_URL=https://github.com/your-username/gin-crud-api.git \
+     --build-arg REPO_URL=https://github.com/Siratul804/gin-crud-api \
      -t gin-crud-api:latest .
    ```
 
